@@ -1,0 +1,39 @@
+{
+  "private": true,
+  "name": "module-federation",
+  "version": "4.2.14",
+  "license": "MIT",
+  "scripts": {
+    "start-1": "cross-env RAZZLE_APP_PATH=generic razzle start",
+    "build-1": "cross-env RAZZLE_APP_PATH=generic razzle build",
+    "test-1": "cross-env RAZZLE_APP_PATH=generic razzle test --env=jsdom",
+    "start:prod-1": "cross-env RAZZLE_APP_PATH=generic PORT=3000 NODE_ENV=production serve -s generic/build/public",
+    "start-2": "cross-env RAZZLE_APP_PATH=home razzle start",
+    "build-2": "cross-env RAZZLE_APP_PATH=home razzle build",
+    "test-2": "cross-env RAZZLE_APP_PATH=home razzle test --env=jsdom",
+    "start:prod-2": "cross-env RAZZLE_APP_PATH=home PORT=3001 NODE_ENV=production serve -s home/build/public",
+    "start": "concurrently \"yarn start-1\" \"yarn start-2\"",
+    "start:prod": "concurrently \"yarn start:prod-1\" \"yarn start:prod-2\"",
+    "build": "concurrently \"yarn build-1 --noninteractive\" \"yarn build-2 --noninteractive\""
+  },
+  "workspaces": [
+    "generic",
+    "home"
+  ],
+  "devDependencies": {
+    "babel-preset-razzle": "4.2.14",
+    "concurrently": "^5.3.0",
+    "cross-env": "^7.0.3",
+    "html-webpack-plugin": "^5.2.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "razzle": "^4.2.14",
+    "razzle-dev-utils": "^4.2.14",
+    "razzle-plugin-scss": "4.2.14",
+    "webpack": "^5.24.0",
+    "postcss": "^8.2.4",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "razzle_meta": {
+    "forceWebpack": true
+  }
+}
