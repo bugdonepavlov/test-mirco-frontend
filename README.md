@@ -6,9 +6,6 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN yarn update-examples TO UPDATE -->Create and start the example:
 
 ```bash
-npx create-razzle-app --example with-module-federation with-module-federation
-
-cd with-module-federation
 yarn start
 ```
 <!-- END install generated instructions please keep comment here to allow auto update -->
