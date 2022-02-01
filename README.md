@@ -1,19 +1,13 @@
-# Razzle Module Federation Example
+# Create React App Example
 
-## How to use
+This example demos a basic host application loading remote component.
 
-<!-- START install generated instructions please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN yarn update-examples TO UPDATE -->Create and start the example:
+- `host` is the host application (cra-based).
+- `remote` standalone application (cra-based) which exposes `Button` component.
 
-```bash
-npx create-razzle-app --example with-module-federation with-module-federation
+# Running Demo
 
-cd with-module-federation
-yarn start
-```
-<!-- END install generated instructions please keep comment here to allow auto update -->
+Run `yarn start`. This will build and serve both `host` and `remote` on ports 3001 and 3002 respectively.
 
-
-## Idea behind the example
-This is a basic, bare-bones example of how to use razzle with-module-federation. It satisfies the entry point
- `src/client.js` for the browser in both apps..
+- [localhost:3001](http://localhost:3001/) (HOST)
+- [localhost:3002](http://localhost:3002/) (STANDALONE REMOTE)

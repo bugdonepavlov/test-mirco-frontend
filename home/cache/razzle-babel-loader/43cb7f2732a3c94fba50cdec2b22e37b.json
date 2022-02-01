@@ -1,1 +1,0 @@
-{"ast":null,"code":"import('./bootstrap');","map":{"version":3,"sources":["/Users/bugdonepavlov/Desktop/work/module-federation-test/with-module-federation/home/src/client.tsx"],"names":[],"mappings":"AAAA,OAAO,aAAP","sourcesContent":["import('./bootstrap');\n"]},"metadata":{},"sourceType":"script"}
